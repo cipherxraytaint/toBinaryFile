@@ -12,7 +12,7 @@
 #define u32 unsigned int
 
 typedef struct TB_Header_ {
-  TB_Header_Interface *hi;
+  TB_Header_Interface hi;
   u32 srcBufBegin;
   u32 srcBufEnd;
   u32 dstBufBegin;
@@ -20,7 +20,7 @@ typedef struct TB_Header_ {
 } TB_Header;
 
 typedef struct TB_PropagatePair_ {
-  TB_PropagatePair_Interface *ppi;
+  TB_PropagatePair_Interface ppi;   // contain an complete interface
   u32 srcAddr;
   u32 srcVal;
   u32 dstAddr;

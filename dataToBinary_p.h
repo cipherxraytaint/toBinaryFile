@@ -9,13 +9,24 @@
 
 #include "dataToBinary.h"
 
-struct TB_PropagatePair_ {
-  TB_PropagatePair_Interface *pi;
+typedef struct TB_PropagatePair_ {
+  TB_PropagatePair_Interface *ppi;
   unsigned int srcAddr;
   unsigned int srcVal;
   unsigned int dstAddr;
   unsigned int dstVal;
-};
+} TB_PropagatePair ;
 
+/* function prototype */
+
+TB_PropagatePair *newPropagatePair(
+  unsigned int srcAddr,
+  unsigned int srcVal,
+  unsigned int dstAddr,
+  unsigned int dstVal);
+
+void delPropagatePair(TB_PropagatePair *pp);
+
+void printPropagatePair(TB_PropagatePair *pp);
 
 #endif /* DATATOBINARY_P_H_ */

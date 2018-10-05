@@ -13,8 +13,8 @@ struct TB_Header_Interface_ {
 };
 
 typedef struct TB_PropagatePair_Interface_ {
-  int (*writeTo)(FILE *fl, struct TB_PropagatePair_Interface_ *pi);
-  int (*readFrom)(FILE *fl, struct TB_PropagatePair_Interface_ *pi);
+  int (*writePropagatePairTo)(FILE *fl, struct TB_PropagatePair_Interface_ *pi);
+  int (*readPropagatePairFrom)(FILE *fl, struct TB_PropagatePair_Interface_ *pi);
 } TB_PropagatePair_Interface;
 
 #endif /* DATATOBINARY_H_ */
